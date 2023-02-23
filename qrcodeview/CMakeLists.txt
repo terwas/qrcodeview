@@ -12,15 +12,12 @@ find_package(QT NAMES Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 add_library(${PROJECT_NAME} SHARED qrcodeview.cpp qrcodeview.h)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/thirdparty/libqrencode)
+
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     qrencode
 )
-set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
-
-
-if(${CMAKE_BUILD_TYPE} MATCHES "Debug")
-    message("===")
-endif()
 
 # set(CMAKE_INSTALL_PREFIX "")

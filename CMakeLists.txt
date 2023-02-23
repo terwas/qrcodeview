@@ -7,6 +7,7 @@ set(CMAKE_INSTALL_LIBDIR ${CMAKE_SOURCE_DIR}/build/lib)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_DEBUG_POSTFIX d)
 
+add_subdirectory(thirdparty)
 add_subdirectory(qrcodeview)
 add_subdirectory(qrcodeviewplugin)
-add_subdirectory(test)
+add_subdirectory(examples)

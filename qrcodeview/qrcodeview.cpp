@@ -82,7 +82,7 @@ void QRcodeView::setLogo(const QPixmap &logo)
 
 qreal QRcodeView::logoScaleFactor() const
 {
-    return m_logeScaleFactor;
+    return m_logoScaleFactor;
 }
 
 void QRcodeView::setLogoScaleFactor(qreal factor)
@@ -90,7 +90,7 @@ void QRcodeView::setLogoScaleFactor(qreal factor)
     if (factor > 0.5) {
         return;
     }
-    m_logeScaleFactor = factor;
+    m_logoScaleFactor = factor;
     update();
 }
 
